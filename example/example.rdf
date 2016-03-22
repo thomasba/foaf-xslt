@@ -49,6 +49,8 @@
     <icqChatID>123456789</icqChatID>
     <img rdf:resource="https://example.org/pic.jpg"/>
     <jabberID>jd@jabber.example.org</jabberID>
+    <knows rdf:resource="http://example.org/someoneelse"/>
+    <knows rdf:resource="mailto:someone@example.org"/>
     <lastname>Doe</lastname>
     <made rdf:resource="https://example.org/i-made-this/"/>
     <mbox rdf:resource="fax:012345"/>
@@ -64,6 +66,9 @@
   </person>
   <rdf:Description rdf:about="mailto:private@example.org">
     <rdfs:label>private</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="mailto:someone@example.org">
+    <name>Someone</name>
   </rdf:Description>
   <rdf:Description rdf:about="mailto:work@example.org">
     <rdfs:label>work</rdfs:label>

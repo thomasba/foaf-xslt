@@ -41,7 +41,8 @@
 		:accountName "jdoe";
 		rdfs:label "example with custom profile url";
 		rdfs:seeAlso <https://example.org/profile/thomasba>
-	].
+	];
+	:knows <mailto:someone@example.org>, <http://example.org/someoneelse>.
 
 # define label in this document (dont look it up)
 <http://dbpedia.org/resource/Stuttgart> rdfs:label "Stuttgart".
@@ -51,3 +52,5 @@
 <fax:67890> rdfs:label "work".
 <mailto:private@example.org> rdfs:label "private".
 <mailto:work@example.org> rdfs:label "work".
+# define a name for a person you know
+<mailto:someone@example.org> :name "Someone".
