@@ -10,7 +10,7 @@
 		<head>
 			<title><xsl:value-of select="//foaf:name"/></title>
 			<style type="text/css">
-				body { max-width: 800px; margin: 0 auto }
+				body { max-width: 800px; margin: 0 auto; font-family: "Helvetica Neue",Helvetica,Arial,sans-serif }
 				div { -webkit-columns: 300px 2; -moz-columns: 300px 2; columns: 300px 2;  }
 				h5  { margin-bottom: 0; }
 				img { height:auto; width:auto; max-width:200px; max-height:200px; }
