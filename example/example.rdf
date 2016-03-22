@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../foaf.xslt"?>
+<rdf:RDF xmlns:pos="http://www.w3.org/2003/01/geo/wgs84_pos#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+   xmlns="http://xmlns.com/foaf/spec/">
+  <rdf:Description rdf:about="fax:012345">
+    <rdf:label>private</rdf:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="fax:67890">
+    <rdf:label>work</rdf:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Stuttgart">
+    <rdf:label>Stuttgart</rdf:label>
+  </rdf:Description>
+  <person rdf:about="mailto:me@example.org">
+    <account>
+      <OnlineAccount>
+        <accountName>jdoe</accountName>
+        <accountServiceHomepage rdf:resource="http://example.org/"/>
+      </OnlineAccount>
+    </account>
+    <account>
+      <OnlineAccount>
+        <rdf:label>Example with custom label</rdf:label>
+        <accountName>jdoe</accountName>
+        <accountServiceHomepage rdf:resource="http://example.org/"/>
+      </OnlineAccount>
+    </account>
+    <account>
+      <OnlineAccount>
+        <rdf:label>example with custom profile url</rdf:label>
+        <rdfs:seeAlso rdf:resource="https://example.org/profile/thomasba"/>
+        <accountName>jdoe</accountName>
+        <accountServiceHomepage rdf:resource="http://example.org/"/>
+      </OnlineAccount>
+    </account>
+    <basedNear rdf:resource="http://dbpedia.org/resource/Stuttgart"/>
+    <basedNear>
+      <pos:Point>
+        <pos:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">48.783333</pos:lat>
+        <pos:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#float">9.183333</pos:lon>
+      </pos:Point>
+    </basedNear>
+    <birthday>1970-01-01</birthday>
+    <firstname>John</firstname>
+    <homepage rdf:resource="http://example.org/"/>
+    <icqChatID>123456789</icqChatID>
+    <img rdf:resource="https://example.org/pic.jpg"/>
+    <jabberID>jd@jabber.example.org</jabberID>
+    <lastname>Doe</lastname>
+    <made rdf:resource="https://example.org/i-made-this/"/>
+    <mbox rdf:resource="fax:012345"/>
+    <mbox rdf:resource="fax:67890"/>
+    <mbox rdf:resource="mailto:private@example.org"/>
+    <mbox rdf:resource="mailto:work@example.org"/>
+    <name>John Doe</name>
+    <nick>jdoe</nick>
+    <openid rdf:resource="http://example.com/openid/jd"/>
+    <phone rdf:resource="tel:0123456"/>
+    <skypeID>john_doe</skypeID>
+    <tipjar rdf:resource="https://example.org/tipjar"/>
+  </person>
+  <rdf:Description rdf:about="mailto:private@example.org">
+    <rdf:label>private</rdf:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="mailto:work@example.org">
+    <rdf:label>work</rdf:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="tel:0123456">
+    <rdf:label>Mobile</rdf:label>
+  </rdf:Description>
+</rdf:RDF>

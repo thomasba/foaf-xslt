@@ -1,0 +1,53 @@
+@prefix : <http://xmlns.com/foaf/spec/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix pos: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<mailto:me@example.org>
+	a :person;
+	:firstname "John";
+	:lastname "Doe";
+	:name "John Doe";
+	:nick "jdoe";
+	:openid <http://example.com/openid/jd>;
+	:jabberID "jd@jabber.example.org";
+	:icqChatID "123456789";
+	:skypeID "john_doe";
+	:homepage <http://example.org/>;
+	:mbox <mailto:private@example.org>, <mailto:work@example.org>, <fax:012345>, <fax:67890>;
+	:phone <tel:0123456>;
+	:tipjar <https://example.org/tipjar>;
+	:birthday "1970-01-01";
+	:basedNear <http://dbpedia.org/resource/Stuttgart>, [
+		a pos:Point;
+		pos:lat "48.783333"^^xsd:float;
+		pos:lon "9.183333"^^xsd:float
+	];
+	:img <https://example.org/pic.jpg>;
+	:made <https://example.org/i-made-this/>;
+	:account [
+		a :OnlineAccount;
+		:accountServiceHomepage <http://example.org/>;
+		:accountName "jdoe";
+	], [
+		a :OnlineAccount;
+		:accountServiceHomepage <http://example.org/>;
+		:accountName "jdoe";
+		rdf:label "Example with custom label"
+	], [
+		a :OnlineAccount;
+		:accountServiceHomepage <http://example.org/>;
+		:accountName "jdoe";
+		rdf:label "example with custom profile url";
+		rdfs:seeAlso <https://example.org/profile/thomasba>
+	].
+
+# define label in this document (dont look it up)
+<http://dbpedia.org/resource/Stuttgart> rdf:label "Stuttgart".
+# define work/private/what ever
+<tel:0123456> rdf:label "Mobile".
+<fax:012345> rdf:label "private".
+<fax:67890> rdf:label "work".
+<mailto:private@example.org> rdf:label "private".
+<mailto:work@example.org> rdf:label "work".
