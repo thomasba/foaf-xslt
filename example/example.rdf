@@ -6,13 +6,13 @@
    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
    xmlns="http://xmlns.com/foaf/spec/">
   <rdf:Description rdf:about="fax:012345">
-    <rdf:label>private</rdf:label>
+    <rdfs:label>private</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="fax:67890">
-    <rdf:label>work</rdf:label>
+    <rdfs:label>work</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/resource/Stuttgart">
-    <rdf:label>Stuttgart</rdf:label>
+    <rdfs:label>Stuttgart</rdfs:label>
   </rdf:Description>
   <person rdf:about="mailto:me@example.org">
     <account>
@@ -23,14 +23,14 @@
     </account>
     <account>
       <OnlineAccount>
-        <rdf:label>Example with custom label</rdf:label>
+        <rdfs:label>Example with custom label</rdfs:label>
         <accountName>jdoe</accountName>
         <accountServiceHomepage rdf:resource="http://example.org/"/>
       </OnlineAccount>
     </account>
     <account>
       <OnlineAccount>
-        <rdf:label>example with custom profile url</rdf:label>
+        <rdfs:label>example with custom profile url</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://example.org/profile/thomasba"/>
         <accountName>jdoe</accountName>
         <accountServiceHomepage rdf:resource="http://example.org/"/>
@@ -63,12 +63,12 @@
     <tipjar rdf:resource="https://example.org/tipjar"/>
   </person>
   <rdf:Description rdf:about="mailto:private@example.org">
-    <rdf:label>private</rdf:label>
+    <rdfs:label>private</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="mailto:work@example.org">
-    <rdf:label>work</rdf:label>
+    <rdfs:label>work</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="tel:0123456">
-    <rdf:label>Mobile</rdf:label>
+    <rdfs:label>Mobile</rdfs:label>
   </rdf:Description>
 </rdf:RDF>

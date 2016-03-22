@@ -55,8 +55,8 @@
 							<xsl:for-each select="foaf:mbox/@rdf:resource[starts-with(.,'mailto:')]">
 								<li>
 									<a href="{.}"><xsl:value-of select="substring-after(., 'mailto:')" /></a>
-									<xsl:if test="//rdf:Description[@rdf:about=current()/../@rdf:resource]/rdf:label">
-										(<xsl:value-of select="//rdf:Description[@rdf:about=current()/../@rdf:resource]/rdf:label" />)
+									<xsl:if test="//rdf:Description[@rdf:about=current()/../@rdf:resource]/rdfs:label">
+										(<xsl:value-of select="//rdf:Description[@rdf:about=current()/../@rdf:resource]/rdfs:label" />)
 									</xsl:if>
 								</li>
 							</xsl:for-each>
@@ -68,8 +68,8 @@
 							<xsl:for-each select="foaf:phone">
 								<li>
 									<a href="{@rdf:resource}"><xsl:value-of select="substring-after(@rdf:resource, 'tel:')" /></a>
-									<xsl:if test="//rdf:Description[@rdf:about=current()/@rdf:resource]/rdf:label">
-										(<xsl:value-of select="//rdf:Description[@rdf:about=current()/@rdf:resource]/rdf:label" />)
+									<xsl:if test="//rdf:Description[@rdf:about=current()/@rdf:resource]/rdfs:label">
+										(<xsl:value-of select="//rdf:Description[@rdf:about=current()/@rdf:resource]/rdfs:label" />)
 									</xsl:if>
 								</li>
 							</xsl:for-each>
@@ -81,8 +81,8 @@
 							<xsl:for-each select="foaf:mbox/@rdf:resource[starts-with(.,'fax:')]">
 								<li>
 									<a href="{.}"><xsl:value-of select="substring-after(., 'fax:')" /></a>
-									<xsl:if test="//rdf:Description[@rdf:about=current()/../@rdf:resource]/rdf:label">
-										(<xsl:value-of select="//rdf:Description[@rdf:about=current()/../@rdf:resource]/rdf:label" />)
+									<xsl:if test="//rdf:Description[@rdf:about=current()/../@rdf:resource]/rdfs:label">
+										(<xsl:value-of select="//rdf:Description[@rdf:about=current()/../@rdf:resource]/rdfs:label" />)
 									</xsl:if>
 								</li>
 							</xsl:for-each>
@@ -101,8 +101,8 @@
 						<ul>
 							<xsl:for-each select="foaf:basedNear">
 								<xsl:choose>
-									<xsl:when test="(@rdf:resource and //rdf:Description[@rdf:about=current()/@rdf:resource]/rdf:label)">
-										<li><a href="{@rdf:resource}"><xsl:value-of select="//rdf:Description[@rdf:about=current()/@rdf:resource]/rdf:label" /></a></li>
+									<xsl:when test="(@rdf:resource and //rdf:Description[@rdf:about=current()/@rdf:resource]/rdfs:label)">
+										<li><a href="{@rdf:resource}"><xsl:value-of select="//rdf:Description[@rdf:about=current()/@rdf:resource]/rdfs:label" /></a></li>
 									</xsl:when>
 									<xsl:when test="@rdf:resource">
 										<li><a href="{@rdf:resource}"><xsl:value-of select="document(@rdf:resource)//rdf:Description/rdfs:label[@xml:lang='de']" /></a></li>
@@ -153,20 +153,20 @@
 							<xsl:for-each select="foaf:account/foaf:OnlineAccount">
 								<li>
 									<xsl:choose>
-										<xsl:when test="(rdfs:seeAlso) and (rdf:label)">
+										<xsl:when test="(rdfs:seeAlso) and (rdfs:label)">
 											<a href="{rdfs:seeAlso/@rdf:resource}"><xsl:value-of select="foaf:accountName" /></a>
 											on
-											<a href="{foaf:accountServiceHomepage/@rdf:resource}"><xsl:value-of select="rdf:label" /></a>
+											<a href="{foaf:accountServiceHomepage/@rdf:resource}"><xsl:value-of select="rdfs:label" /></a>
 										</xsl:when>
 										<xsl:when test="rdfs:seeAlso">
 											<a href="{rdfs:seeAlso/@rdf:resource}"><xsl:value-of select="foaf:accountName" /></a>
 											on
 											<a href="{foaf:accountServiceHomepage/@rdf:resource}"><xsl:value-of select="foaf:accountServiceHomepage/@rdf:resource" /></a>
 										</xsl:when>
-										<xsl:when test="rdf:label">
+										<xsl:when test="rdfs:label">
 											<a href="{concat(foaf:accountServiceHomepage/@rdf:resource, foaf:accountName)}"><xsl:value-of select="foaf:accountName" /></a>
 											on
-											<a href="{foaf:accountServiceHomepage/@rdf:resource}"><xsl:value-of select="rdf:label" /></a>
+											<a href="{foaf:accountServiceHomepage/@rdf:resource}"><xsl:value-of select="rdfs:label" /></a>
 										</xsl:when>
 										<xsl:otherwise>
 											<a href="{concat(foaf:accountServiceHomepage/@rdf:resource, foaf:accountName)}"><xsl:value-of select="foaf:accountName" /></a>
