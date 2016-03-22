@@ -50,7 +50,7 @@
 						<p><xsl:value-of select="foaf:birthday" /></p>
 					</xsl:if>
 					<xsl:if test="foaf:mbox/@rdf:resource[starts-with(.,'mailto:')]">
-						<h5>eMail:</h5>
+						<h5>eMail</h5>
 						<ul>
 							<xsl:for-each select="foaf:mbox/@rdf:resource[starts-with(.,'mailto:')]">
 								<li>
@@ -63,7 +63,7 @@
 						</ul>
 					</xsl:if>
 					<xsl:if test="foaf:phone">
-						<h5>Phone:</h5>
+						<h5>Phone</h5>
 						<ul>
 							<xsl:for-each select="foaf:phone">
 								<li>
@@ -76,7 +76,7 @@
 						</ul>
 					</xsl:if>
 					<xsl:if test="foaf:mbox/@rdf:resource[starts-with(.,'fax:')]">
-						<h5>Fax:</h5>
+						<h5>Fax</h5>
 						<ul>
 							<xsl:for-each select="foaf:mbox/@rdf:resource[starts-with(.,'fax:')]">
 								<li>
