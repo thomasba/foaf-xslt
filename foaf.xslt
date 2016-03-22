@@ -195,6 +195,21 @@
 						</ul>
 					</xsl:if>
 					<xsl:if test="foaf:knows">
+						<h5>Persons this person is interested in</h5>
+						<ul>
+							<xsl:for-each select="foaf:topic_interest">
+								<xsl:choose>
+									<xsl:when test="//rdf:Description[@rdf:about=current()/@rdf:resource]/rdfs:label">
+										<li><a href="{@rdf:resource}"><xsl:value-of select="//rdf:Description[@rdf:about=current()/@rdf:resource]/rdfs:label"/></a></li>
+									</xsl:when>
+									<xsl:otherwise>
+										<li><a href="{@rdf:resource}"><xsl:value-of select="@rdf:resource"/></a></li>
+									</xsl:otherwise>
+								</xsl:choose>
+							</xsl:for-each>
+						</ul>
+					</xsl:if>
+					<xsl:if test="foaf:knows">
 						<h5>Persons this person knows</h5>
 						<ul>
 							<xsl:for-each select="foaf:knows">

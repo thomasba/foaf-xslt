@@ -3,6 +3,7 @@
 @prefix pos: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
 
 <mailto:me@example.org>
 	a :person;
@@ -42,7 +43,8 @@
 		rdfs:label "example with custom profile url";
 		rdfs:seeAlso <https://example.org/profile/thomasba>
 	];
-	:knows <mailto:someone@example.org>, <http://example.org/someoneelse>.
+	:knows <mailto:someone@example.org>, <http://example.org/someoneelse>;
+	:topic_interest <http://example.org/stuff>, <http://xmlns.com/foaf/spec/>.
 
 # define label in this document (dont look it up)
 <http://dbpedia.org/resource/Stuttgart> rdfs:label "Stuttgart".
@@ -54,3 +56,5 @@
 <mailto:work@example.org> rdfs:label "work".
 # define a name for a person you know
 <mailto:someone@example.org> :name "Someone".
+# labels for topic_interest
+<http://example.org/stuff> rdfs:label "Stuff".

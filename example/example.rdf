@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="../foaf.xslt"?>
-<rdf:RDF xmlns:pos="http://www.w3.org/2003/01/geo/wgs84_pos#"
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:pos="http://www.w3.org/2003/01/geo/wgs84_pos#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
@@ -13,6 +14,9 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/resource/Stuttgart">
     <rdfs:label>Stuttgart</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff">
+    <rdfs:label>Stuff</rdfs:label>
   </rdf:Description>
   <person rdf:about="mailto:me@example.org">
     <account>
@@ -63,6 +67,8 @@
     <phone rdf:resource="tel:0123456"/>
     <skypeID>john_doe</skypeID>
     <tipjar rdf:resource="https://example.org/tipjar"/>
+    <topic_interest rdf:resource="http://example.org/stuff"/>
+    <topic_interest rdf:resource="http://xmlns.com/foaf/spec/"/>
   </person>
   <rdf:Description rdf:about="mailto:private@example.org">
     <rdfs:label>private</rdfs:label>
