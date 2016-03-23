@@ -35,7 +35,7 @@
     <account>
       <OnlineAccount>
         <rdfs:label>example with custom profile url</rdfs:label>
-        <rdfs:seeAlso rdf:resource="https://example.org/profile/thomasba"/>
+        <rdfs:seeAlso rdf:resource="https://example.org/profile/jdoe"/>
         <accountName>jdoe</accountName>
         <accountServiceHomepage rdf:resource="http://example.org/"/>
       </OnlineAccount>
