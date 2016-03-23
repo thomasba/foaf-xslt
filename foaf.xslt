@@ -8,9 +8,12 @@
 <xsl:template match="/rdf:RDF">
 	<html>
 		<head>
-			<title><xsl:value-of select="//foaf:name"/></title>
+			<meta charset="utf-8" />
+			<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+			<meta name="viewport" content="width=device-width" />
+			<title><xsl:value-of select="//foaf:person/foaf:name"/></title>
 			<style type="text/css">
-				body { max-width: 800px; margin: 0 auto; font-family: "Helvetica Neue",Helvetica,Arial,sans-serif }
+				body { max-width: 820px; margin: 0 auto; font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; padding: 0 10px}
 				div { -webkit-columns: 300px 2; -moz-columns: 300px 2; columns: 300px 2;  }
 				h5  { margin-bottom: 0; }
 				img { height:auto; width:auto; max-width:200px; max-height:200px; }
